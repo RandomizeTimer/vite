@@ -1,12 +1,14 @@
-import { StrictMode } from "react";
+// import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import "./index.css";
 
 import App from "./App.tsx";
 import Home from "./pages/Home";
+import Users from "./pages/Users.tsx";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import userStore from "./store/userStore.ts";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +16,14 @@ const router = createBrowserRouter([
         element: <App />,
         children: [
             { index: true, element: <Home /> },
+            {
+                path: "users",
+                loader: () => {
+                    userStore.fetchUsers();
+                    userStore.fetchRoles();
+                },
+                element: <Users />,
+            },
             { path: "about", element: <About /> },
             { path: "contact", element: <Contact /> },
         ],
@@ -28,8 +38,4 @@ const router = createBrowserRouter([
     },
 ]);
 
-createRoot(document.getElementById("root")!).render(
-    <StrictMode>
-        <RouterProvider router={router} />
-    </StrictMode>,
-);
+createRoot(document.getElementById("root")!).render(<RouterProvider router={router} />);

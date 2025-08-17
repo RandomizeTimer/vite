@@ -11,7 +11,10 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "antd": "^5.27.0",
         "axios": "^1.11.0",
+        "mobx": "^6.13.7",
+        "mobx-react-lite": "^4.1.0",
         "react": "^19.1.1",
         "react-dom": "^19.1.1",
         "react-hook-form": "^7.62.0",

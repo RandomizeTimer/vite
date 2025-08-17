@@ -8,6 +8,9 @@ const Navbar = () => {
                     <NavLink to="/">Главная</NavLink>
                 </li>
                 <li>
+                    <NavLink to="/users">Пользователи</NavLink>
+                </li>
+                <li>
                     <NavLink to="/about">О нас</NavLink>
                 </li>
                 <li>
