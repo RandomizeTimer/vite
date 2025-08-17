@@ -5,19 +5,13 @@ const Navbar = () => {
         <nav style={{ background: "#333", padding: "1rem" }}>
             <ul style={{ display: "flex", gap: "1rem", listStyle: "none", margin: 0, padding: 0 }}>
                 <li>
-                    <NavLink to="/" style={{ color: "white", textDecoration: "none" }}>
-                        Главная
-                    </NavLink>
+                    <NavLink to="/">Главная</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/about" style={{ color: "white", textDecoration: "none" }}>
-                        О нас
-                    </NavLink>
+                    <NavLink to="/about">О нас</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/contact" style={{ color: "white", textDecoration: "none" }}>
-                        Контакты
-                    </NavLink>
+                    <NavLink to="/contact">Контакты</NavLink>
                 </li>
             </ul>
         </nav>
